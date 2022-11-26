@@ -26,16 +26,16 @@ const  App = ()=> {
       </div>
 
       { activeMenue ? (
-        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'150px',background:'gray',transition:'.7s'}}>
+        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'250px',background:'rgb(245 242 242 / 37%)',transition:'.7s',overflow:'scroll'}}>
         <Sidebar />
         </div>
       ) : (
-        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'-100%',height:'100vh',transition:'.7s'}}>
+        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'-100%',height:'100vh',transition:'.7s',overflow:'scroll'}}>
         <Sidebar />
         </div>
       )
       }
-      <div className={activeMenue ? 'w-75':'w-100'} style={{background:'pink',height:'50px',position:'static',marginLeft: activeMenue ? '150px':'0',transition:'.7s'}}>
+      <div className={activeMenue ? 'w-75':'w-100'} style={{background:'pink',height:'50px',position:'static',marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
         <Navbar />
       </div>
 
