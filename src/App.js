@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -10,10 +10,11 @@ import { Ecommerce, Orders, Calender, Employees, Stacked, Pyramid, Customers, Ka
 
 const  App = ()=> {
 
-  const activeMenue = true;
+  const [activeMenue , setActiveMenue] = useState(true);
+
   return (
 
-  <div className="d-flex">
+  <div className="d-flex flex-column">
     <BrowserRouter>
 
       
@@ -27,7 +28,7 @@ const  App = ()=> {
 
       { activeMenue ? (
         <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'250px',background:'rgb(245 242 242 / 37%)',transition:'.7s',overflow:'scroll'}}>
-        <Sidebar />
+        <Sidebar setActiveMenue={setActiveMenue} />
         </div>
       ) : (
         <div className="opendSideBar" style={{position:'fixed',top:'0',left:'-100%',height:'100vh',transition:'.7s',overflow:'scroll'}}>
@@ -35,11 +36,12 @@ const  App = ()=> {
         </div>
       )
       }
+
       <div className={activeMenue ? 'w-75':'w-100'} style={{background:'pink',height:'50px',position:'static',marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
         <Navbar />
       </div>
 
-      <div>
+      <div style={{marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
         <Routes>
 
         {/* dashboard  */}

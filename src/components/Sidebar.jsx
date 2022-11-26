@@ -7,7 +7,7 @@ import {TooltipComponent} from '@syncfusion/ej2-react-popups';
 import {links} from '../data/dummy';
 
 
-const Sidebar = () => {
+const Sidebar = ({setActiveMenue}) => {
 
   const activeLink = 'bg-secondary bg-gradient bg-opacity-25 rounded-3 d-block ';
   const normalLink = 'rounded-3 d-block';
@@ -24,7 +24,7 @@ const Sidebar = () => {
         </div>
 
         <TooltipComponent content='close menue' position='TopCenter' >
-          <button className='btn' style={{fontSize:'25px'}} onClick={()=>{}}>
+          <button className='btn' style={{fontSize:'25px'}} onClick={()=>{setActiveMenue(false)}}>
           <MdOutlineCancel />
           </button>
         </TooltipComponent>
