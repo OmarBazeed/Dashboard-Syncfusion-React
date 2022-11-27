@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
+import { AiOutlineBars } from "react-icons/ai";
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
+
+import { Context } from "./contexts/ContextProvider";
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calender, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
@@ -10,7 +13,7 @@ import { Ecommerce, Orders, Calender, Employees, Stacked, Pyramid, Customers, Ka
 
 const  App = ()=> {
 
-  const [activeMenue , setActiveMenue] = useState(true);
+  const {activeMenue , setActiveMenue} = useContext(Context);
 
   return (
 
@@ -28,7 +31,7 @@ const  App = ()=> {
 
       { activeMenue ? (
         <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'250px',background:'rgb(245 242 242 / 37%)',transition:'.7s',overflow:'scroll'}}>
-        <Sidebar setActiveMenue={setActiveMenue} />
+        <Sidebar />
         </div>
       ) : (
         <div className="opendSideBar" style={{position:'fixed',top:'0',left:'-100%',height:'100vh',transition:'.7s',overflow:'scroll'}}>
@@ -37,7 +40,7 @@ const  App = ()=> {
       )
       }
 
-      <div className={activeMenue ? 'w-75':'w-100'} style={{background:'pink',height:'50px',position:'static',marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
+      <div className={activeMenue ? 'w-75':'w-100'} style={{position:'static',marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
         <Navbar />
       </div>
 
