@@ -14,7 +14,7 @@ import {Cart , Notification , Chat , UserProfile} from '.';
 
 const NavButton = ({title , customFunc , color , icon, dotColor})=>(
     <TooltipComponent content={title} position='BottomCenter'>
-      <button onClick={()=>customFunc} className='position-relative btn' style={{color , fontSize:'25px'}} >
+      <button onClick={customFunc} className='position-relative btn' style={{color , fontSize:'25px'}} >
       <span
       style={{background:dotColor , position:'absolute' , top:'15%', left:'38%'}}
       className='p-2 rounded-circle'
@@ -29,7 +29,6 @@ const Navbar = () => {
 
 const {setActiveMenue , isClicked  , handleClick , screenSize , setScreenSize } = useContext(Context);
 
-
 useEffect(()=>{
 
   const handleResize = ()=> setScreenSize(window.innerWidth);
@@ -38,7 +37,6 @@ useEffect(()=>{
 
   return ()=> window.removeEventListener('resize',handleResize)
 },[])
-
 
 useEffect(()=>{
   if(screenSize <= 900){

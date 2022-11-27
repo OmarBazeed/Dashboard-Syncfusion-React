@@ -10,11 +10,11 @@ import {links} from '../data/dummy';
 
 const Sidebar = () => {
 
-  const {setActiveMenue , screenSize} = useContext(Context);
+  const { setActiveMenue , screenSize} = useContext(Context);
 
   const handleCloseSideBar = ()=>{
-    if(screenSize <= 900){
-      setActiveMenue(true)
+    if( screenSize <= 900){
+      setActiveMenue(false)
     }else{
       setActiveMenue(false)
     }
@@ -48,7 +48,7 @@ const Sidebar = () => {
               <p className='mb-3 text-muted'> {(item.title).toUpperCase()}</p>
 
                 { item.links.map(ele=>(
-                  <NavLink to={ele.name} key={ele.name} className={ ({isActive})=> isActive ?  activeLink : normalLink } onClick={()=> handleCloseSideBar}>
+                  <NavLink to={ele.name} key={ele.name} className={ ({isActive})=> isActive ?  activeLink : normalLink } onClick={handleCloseSideBar} >
                   <div className='d-flex align-items-center ps-2 my-2' style={{paddingTop:'10px'}} >
                   <p className='me-3 text-primary'>{ele.icon}</p>
                   <p className='text-capitalize'>{ele.name}</p>
