@@ -17,10 +17,9 @@ const  App = ()=> {
 
   return (
 
-  <div className="d-flex flex-column">
+  <div>
     <BrowserRouter>
 
-      
       <div className="tooltipSettings" style={{position:'fixed',right:'20px',bottom:'20px',zIndex:'10000'}}>
         <TooltipComponent content='Settings' position="Top">
           <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',color:'black',lineHeight:'24px',background:'blue',color:'white'}}>
@@ -40,41 +39,43 @@ const  App = ()=> {
       )
       }
 
-      <div className={activeMenue ? 'w-75':'w-100'} style={{position:'static',marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
-        <Navbar />
-      </div>
 
-      <div style={{marginLeft: activeMenue ? '250px':'0',transition:'.7s'}}>
-        <Routes>
+      <section className="d-flex flex-column" style={{background:'#fcffff', marginLeft: activeMenue ? '250px':'0',transition:'.7s',height:'100vh'}}>
+        <div className={activeMenue ? 'w-75':'w-100'} style={{transition:'.7s'}}>
+          <Navbar />
+        </div>
 
-        {/* dashboard  */}
-        <Route path="/" element={(<Ecommerce />)} />
-        <Route path="/ecommerce" element={(<Ecommerce />)} />
+        <div>
+          <Routes>
 
-        {/* pages  */}
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/employees" element={<Employees />} />
-        <Route path="/customers" element={<Customers />} />
+          {/* dashboard  */}
+          <Route path="/" element={(<Ecommerce />)} />
+          <Route path="/ecommerce" element={(<Ecommerce />)} />
 
-        {/* apps  */}
-        <Route path="/kanban" element={<Kanban />} />
-        <Route path="/editor" element={<Editor />} />
-        <Route path="/calendar" element={<Calender />} />
-        <Route path="/color-picker" element={<ColorPicker />} />
+          {/* pages  */}
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/customers" element={<Customers />} />
 
-        {/* charts  */}
-        <Route path="/line" element={<Line />} />
-        <Route path="/area" element={<Area />} />
-        <Route path="/bar" element={<Bar />} />
-        <Route path="/pie" element={<Pie />} />
-        <Route path="/financial" element={<Financial />} />
-        <Route path="/color-mapping" element={<ColorMapping />} />
-        <Route path="/pyramid" element={<Pyramid />} />
-        <Route path="/stacked" element={<Stacked />} />
+          {/* apps  */}
+          <Route path="/kanban" element={<Kanban />} />
+          <Route path="/editor" element={<Editor />} />
+          <Route path="/calendar" element={<Calender />} />
+          <Route path="/color-picker" element={<ColorPicker />} />
 
-        </Routes>
-      </div>
+          {/* charts  */}
+          <Route path="/line" element={<Line />} />
+          <Route path="/area" element={<Area />} />
+          <Route path="/bar" element={<Bar />} />
+          <Route path="/pie" element={<Pie />} />
+          <Route path="/financial" element={<Financial />} />
+          <Route path="/color-mapping" element={<ColorMapping />} />
+          <Route path="/pyramid" element={<Pyramid />} />
+          <Route path="/stacked" element={<Stacked />} />
 
+          </Routes>
+        </div>
+      </section>
     </BrowserRouter>
   </div>
   );

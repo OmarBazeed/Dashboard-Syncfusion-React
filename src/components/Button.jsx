@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Button = () => {
+const Button = ({color , background , title , borderRadius}) => {
   return (
-    <div>Button</div>
+    <React.Fragment>
+      <button className={`btn text-capitalize`} style={{background , color , borderRadius}}>
+      {title}
+      </button>
+    </React.Fragment>
   )
 }
 
