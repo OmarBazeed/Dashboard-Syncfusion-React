@@ -10,7 +10,6 @@ const Ecommerce = () => {
       <div className='d-flex flex-column justify-content-center mt-3 mx-3' >
 
         <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'0% 38%',width:'100%',backgroundSize:'cover',borderRadius:'20px'}}>
-
           <p className='text-muted fw-bold mb-0'>Earnings</p>
           <p className='fs-4'> $63,448.73</p>
           <Button color="white" title="download" background="blue" borderRadius='10px' />
@@ -52,16 +51,17 @@ const Ecommerce = () => {
                   <span className='fw-bold fs-5 me-3'>$48,487</span>
                   <p className='mb-0 text-muted'> Expense</p>
                 </div>
-
-                <SparkLine
-                  id='line-sparkline'
-                  width='250px'
-                  height='80px'
-                  type='Line'
-                  color='blue'
-                  currentColor='blue'
-                  data={SparklineAreaData}
-                />
+                <div className='mt-5'>
+                  <SparkLine
+                    id='line-sparkline'
+                    width='250px'
+                    height='80px'
+                    type='Line'
+                    color='blue'
+                    currentColor='blue'
+                    data={SparklineAreaData}
+                  />
+                </div>
 
               </div>
 
