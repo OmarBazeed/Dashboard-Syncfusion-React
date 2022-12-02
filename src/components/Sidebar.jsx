@@ -45,7 +45,7 @@ const Sidebar = () => {
         { links.map((item)=>{
           return(
             <div key={item.title} className='my-3'>
-              <p className='mb-3 text-muted'> {(item.title).toUpperCase()}</p>
+              <p className='mb-3 text-muted fw-bold'> {(item.title).toUpperCase()}</p>
 
                 { item.links.map(ele=>(
                   <NavLink to={ele.name} key={ele.name} className={ ({isActive})=> isActive ?  activeLink : normalLink } onClick={handleCloseSideBar} >

@@ -37,9 +37,9 @@ export const gridOrderImage = (props) => ( <
 export const gridOrderStatus = (props) => ( <
     button type = "button"
     style = {
-        { background: props.StatusBg } }
-    className = "text-white py-1 px-2 capitalize rounded-2xl text-md" >
-    { props.Status } <
+        { background: props.StatusBg }
+    }
+    className = "text-white py-1 px-2 capitalize rounded-2xl text-md" > { props.Status } <
     /button>
 );
 
@@ -76,8 +76,8 @@ const gridEmployeeProfile = (props) => ( <
     alt = "employee" /
     >
     <
-    p > { props.Name } < /p> <
-    /div>
+    p > { props.Name } < /p> < /
+    div >
 );
 
 const gridEmployeeCountry = (props) => ( <
@@ -85,8 +85,8 @@ const gridEmployeeCountry = (props) => ( <
     <
     GrLocation / >
     <
-    span > { props.Country } < /span> <
-    /div>
+    span > { props.Country } < /span> < /
+    div >
 );
 export const EditorData = () => ( <
     div >
@@ -125,8 +125,8 @@ export const EditorData = () => ( <
     JavaScript Resources The React documentation assumes some familiarity with programming in the JavaScript language.You don’ t have to be an expert, but it’ s harder to learn both React and JavaScript at the same time.
 
     We recommend going through this JavaScript overview to check your knowledge level.It will take you between 30 minutes and an hour but you will feel more confident learning React. <
-    /h3> <
-    /div>
+    /h3> < /
+    div >
 );
 const customerGridImage = (props) => ( <
     div className = "image flex gap-4" >
@@ -139,8 +139,8 @@ const customerGridImage = (props) => ( <
     div >
     <
     p > { props.CustomerName } < /p> <
-    p > { props.CustomerEmail } < /p> <
-    /div> <
+    p > { props.CustomerEmail } < /p> < /
+    div > <
     /div>
 );
 
@@ -148,11 +148,12 @@ const customerGridStatus = (props) => ( <
     div className = "flex gap-2 justify-center items-center text-gray-700 capitalize" >
     <
     p style = {
-        { background: props.StatusBg } }
+        { background: props.StatusBg }
+    }
     className = "rounded-full h-3 w-3" / >
     <
-    p > { props.Status } < /p> <
-    /div>
+    p > { props.Status } < /p> < /
+    div >
 );
 export const areaPrimaryXAxis = {
     valueType: 'DateTime',
@@ -645,7 +646,7 @@ export const earningData = [{
         title: 'Customers',
         iconColor: '#03C9D7',
         iconBg: '#E5FAFB',
-        pcColor: 'red-600',
+        pcColor: '#ff000099',
     },
     {
         icon: < BsBoxSeam / > ,
@@ -654,7 +655,7 @@ export const earningData = [{
         title: 'Products',
         iconColor: 'rgb(255, 244, 229)',
         iconBg: 'rgb(254, 201, 15)',
-        pcColor: 'green-600',
+        pcColor: '#00800099',
     },
     {
         icon: < FiBarChart / > ,
@@ -664,7 +665,7 @@ export const earningData = [{
         iconColor: 'rgb(228, 106, 118)',
         iconBg: 'rgb(255, 244, 229)',
 
-        pcColor: 'green-600',
+        pcColor: '#00800099',
     },
     {
         icon: < HiOutlineRefresh / > ,
@@ -673,7 +674,7 @@ export const earningData = [{
         title: 'Refunds',
         iconColor: 'rgb(0, 194, 146)',
         iconBg: 'rgb(235, 250, 242)',
-        pcColor: 'red-600',
+        pcColor: '#ff000099',
     },
 ];
 

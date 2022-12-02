@@ -18,7 +18,7 @@ const Ecommerce = () => {
 
         <div className='d-flex align-items-center justify-content-around flex-wrap'>
           {earningData.map((ele)=>(
-            <div className='p-3 mt-3' style={{boxShadow:'0px 0px 3px gray', width:'250px',background:'white'}} key={ele.title}>
+            <div className='p-3 mt-3' style={{boxShadow:'0px 0px 3px gray', width:'300px',background:'white'}} key={ele.title}>
 
               <p style={{background:ele.iconBg , fontSize:'25px',width:'fit-content',padding:'4px 15px 10px 15px',borderRadius:'50%',color:ele.iconColor}} > {ele.icon} </p>
               <span className='fw-bold me-2 fs-5'> {ele.amount}</span>
@@ -29,8 +29,48 @@ const Ecommerce = () => {
           ))}
         </div>
 
-        <div>
-            <SparkLine />
+        <div className='mt-5' style={{background:'white'}}>
+
+            <div className='d-flex justify-content-around align-items-center mt-2'>
+              <p className='text-muted fs-6 fw-bold mb-0'> Revenue Updates</p>
+              <div>
+              <span> <GoPrimitiveDot />  Expense </span>
+              <span className='text-success ms-2'> <GoPrimitiveDot />  Budget </span>
+              </div>
+            </div>
+
+            <div className='d-flex justify-content-around align-items-center mt-4'>
+
+              <div className='' style={{borderRight:'1px solid gray', padding:'0 20px'}}>
+
+                <div className='mb-3'>
+                  <span className='fw-bold fs-5 me-3'>$93,438</span>
+                  <span className='text-light bg-success rounded-circle p-2' > 23%</span>
+                  <p className='mb-0 text-muted'> Budget</p>
+                </div>
+                <div>
+                  <span className='fw-bold fs-5 me-3'>$48,487</span>
+                  <p className='mb-0 text-muted'> Expense</p>
+                </div>
+
+                <SparkLine
+                  id='line-sparkline'
+                  width='250px'
+                  height='80px'
+                  type='Line'
+                  color='blue'
+                  currentColor='blue'
+                  data={SparklineAreaData}
+                />
+
+              </div>
+
+              <div>
+
+              </div>
+
+            </div>
+
         </div>
       
       </div>
