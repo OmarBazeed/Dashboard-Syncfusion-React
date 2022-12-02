@@ -9,7 +9,7 @@ const Ecommerce = () => {
   return (
       <div className='d-flex flex-column justify-content-center mt-3 mx-3' >
 
-        <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'0% 38%',width:'100%',backgroundSize:'cover',borderRadius:'20px'}}>
+        <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'right 38%',backgroundSize:'cover',borderRadius:'20px'}}>
           <p className='text-muted fw-bold mb-0'>Earnings</p>
           <p className='fs-4'> $63,448.73</p>
           <Button color="white" title="download" background="blue" borderRadius='10px' />
@@ -30,7 +30,7 @@ const Ecommerce = () => {
 
         <div className='mt-5' style={{background:'white'}}>
 
-            <div className='d-flex justify-content-around align-items-center mt-2'>
+            <div className='d-flex justify-content-around align-items-center mt-2 flex-wrap'>
               <p className='text-muted fs-6 fw-bold mb-0'> Revenue Updates</p>
               <div>
               <span> <GoPrimitiveDot />  Expense </span>
@@ -38,9 +38,9 @@ const Ecommerce = () => {
               </div>
             </div>
 
-            <div className='d-flex justify-content-around align-items-center mt-4'>
+            <div className='d-flex justify-content-around align-items-center mt-4 flex-wrap'>
 
-              <div className='' style={{borderRight:'1px solid gray', padding:'0 20px'}}>
+              <div className='' style={{borderRight:'1px solid gray', paddingRight:'200px'}}>
 
                 <div className='mb-3'>
                   <span className='fw-bold fs-5 me-3'>$93,438</span>
@@ -62,11 +62,14 @@ const Ecommerce = () => {
                     data={SparklineAreaData}
                   />
                 </div>
+                <div className='mt-5'>
+                  <Button color="white" title="Dowload Report" background="blue" borderRadius='20px' />
+                </div>
 
               </div>
 
               <div>
-
+                <Stacked width='320px' height='360px' />
               </div>
 
             </div>
