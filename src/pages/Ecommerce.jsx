@@ -28,7 +28,7 @@ const Ecommerce = () => {
           ))}
         </div>
 
-        <div className='mt-5' style={{background:'white'}}>
+        <div className='mt-5 pt-3' style={{background:'white'}}>
 
             <div className='d-flex justify-content-around align-items-center mt-2 flex-wrap'>
               <p className='text-muted fs-6 fw-bold mb-0'> Revenue Updates</p>
@@ -40,7 +40,7 @@ const Ecommerce = () => {
 
             <div className='d-flex justify-content-around align-items-center mt-4 flex-wrap'>
 
-              <div className='' style={{borderRight:'1px solid #80808040', paddingRight:'200px'}}>
+              <div className='rightSyncCom'>
 
                 <div className='mb-3'>
                   <span className='fw-bold fs-5 me-3'>$93,438</span>
