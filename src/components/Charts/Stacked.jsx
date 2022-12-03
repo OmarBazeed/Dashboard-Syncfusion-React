@@ -4,11 +4,23 @@ import {stackedPrimaryXAxis , stackedPrimaryYAxis , stackedCustomSeries} from '.
 
 const Stacked = ({width , height}) => {
   return (
-      <ChartComponent width={width} height={height} >
+      <ChartComponent 
+      width={width} 
+      height={height}
+      id='charts'
+      chartArea={{border:{ width:0 }}}
+      tooltip={{enable:true}}
+      primaryXAxis={stackedPrimaryXAxis}
+      primaryYAxis={stackedPrimaryYAxis}
+      legendSettings={{background:'white'}}
+      >
 
         <Inject services={[Legend , Category , StackingColumnSeries , Tooltip ]} />
+
         <SeriesCollectionDirective>
-        
+          {stackedCustomSeries.map((item , index)=>(
+            <SeriesDirective key={index} {...item} />
+          ))}
         </SeriesCollectionDirective>
 
       </ChartComponent>

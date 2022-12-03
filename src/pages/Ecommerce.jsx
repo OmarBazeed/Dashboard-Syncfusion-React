@@ -40,7 +40,7 @@ const Ecommerce = () => {
 
             <div className='d-flex justify-content-around align-items-center mt-4 flex-wrap'>
 
-              <div className='' style={{borderRight:'1px solid gray', paddingRight:'200px'}}>
+              <div className='' style={{borderRight:'1px solid #80808040', paddingRight:'200px'}}>
 
                 <div className='mb-3'>
                   <span className='fw-bold fs-5 me-3'>$93,438</span>
