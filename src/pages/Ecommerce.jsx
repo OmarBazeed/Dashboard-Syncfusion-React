@@ -1,5 +1,4 @@
 import React from 'react';
-import {BsCurrentDollar} from 'react-icons/bs';
 import {GoPrimitiveDot} from 'react-icons/go';
 import {Stacked , Pie , Button , SparkLine} from '../components';
 import {earningData , SparklineAreaData ,ecomPieChartData} from '../data/dummy';
