@@ -6,7 +6,7 @@ import {earningData , SparklineAreaData ,ecomPieChartData} from '../data/dummy';
 
 const Ecommerce = () => {
   return (
-      <div className='d-flex flex-column justify-content-center mt-3 mx-3' >
+      <div className='d-flex flex-column justify-content-center mt-3 me-3' >
 
         <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'right 38%',backgroundSize:'cover',borderRadius:'20px'}}>
           <p className='text-muted fw-bold mb-0'>Earnings</p>

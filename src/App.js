@@ -45,7 +45,7 @@ const  App = ()=> {
           <Navbar />
         </div>
 
-        <div>
+        <div className="mx-3">
           <Routes>
 
           {/* dashboard  */}
