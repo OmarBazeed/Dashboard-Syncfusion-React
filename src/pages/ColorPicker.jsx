@@ -22,7 +22,7 @@ const change = (e)=>{
             <p className='fs-5 fw-semibold'> Inline-Pallete</p>
             <ColorPickerComponent
             id='iniline-pallete'
-            mode='Pallete'
+            mode='Palette'
             modeSwitcher={false}
             showButtons={false}
             inline
@@ -34,7 +34,6 @@ const change = (e)=>{
             <p className='fs-5 fw-semibold'> Inline-Picker </p>
             <ColorPickerComponent
             id='iniline-pallete'
-            mode='Picker'
             modeSwitcher={false}
             showButtons={false}
             inline
