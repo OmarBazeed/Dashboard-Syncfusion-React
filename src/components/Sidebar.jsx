@@ -26,12 +26,14 @@ const Sidebar = () => {
   return (
     <div className='mainDiv'>
 
-      <Link to='/'>
+ 
         <div className='d-flex align-items-center logo fw-bold fs-5 ms-2 justify-content-between my-2'>
-          <div>
-            <SiShopware />
-            <span className=''> Shoppy </span> 
-          </div>
+          <Link to='/'>
+            <div>
+              <SiShopware />
+              <span className=''> Shoppy </span> 
+            </div>
+          </Link>
 
           <TooltipComponent content='close menue' position='TopCenter' >
             <button className='btn' style={{fontSize:'25px'}} onClick={()=>{setActiveMenue(false)}}>
@@ -39,7 +41,7 @@ const Sidebar = () => {
             </button>
           </TooltipComponent>
         </div>
-      </Link>
+
 
       <div className='d-flex flex-column ps-3'>
         { links.map((item)=>{

@@ -27,6 +27,17 @@ a {
     width: 100% !important;
 }
 
+.ordersPage img {
+    border-radius: 20px;
+}
+
+.ordersPage td button {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 3px grey;
+    padding: 8px !important;
+}
+
 .employessPage img {
     border-radius: 50% !important;
 }
