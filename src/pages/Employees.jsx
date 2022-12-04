@@ -13,7 +13,7 @@ const Employees = () => {
       dataSource={employeesData}
       allowPaging
       allowSorting
-      toolbar={['search']}
+      toolbar={['Search']}
       width='auto'
     >
 
