@@ -11,7 +11,7 @@ const Calender = () => {
 
     <ScheduleComponent
     height='650px'
-    eventSettings={{ dataSource: scheduleData}}
+    eventSettings={{ dataSource: scheduleData }}
     // this new Date () --> According To The Start Date In The scheduleData
     selectedDate={new Date("2021, 01 , 10")}
     >
