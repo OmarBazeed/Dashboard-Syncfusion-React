@@ -9,7 +9,7 @@ const change = (e)=>{
 }
 
   return (
-    <div className='colorpickerPage mx-3 pt-3 ps-3' style={{background:'white'}}>
+    <div className='colorpickerPage mx-3 pt-3 ps-3' style={{background:'white',overflow:'hidden'}}>
 
       <Header category='App' title='ColorPicker' />
 
@@ -17,8 +17,8 @@ const change = (e)=>{
       
         <div id='preview' />
 
-        <div className='d-flex justify-content-center align-items-center'>
-          <div className='me-4'>
+        <div className='d-flex justify-content-center align-items-center flex-wrap'>
+          <div className='me-4 mb-4'>
             <p className='fs-5 fw-semibold'> Inline-Pallete</p>
             <ColorPickerComponent
             id='iniline-pallete'
@@ -30,7 +30,7 @@ const change = (e)=>{
             />
           </div>
 
-          <div>
+          <div className='me-4 mb-4'>
             <p className='fs-5 fw-semibold'> Inline-Picker </p>
             <ColorPickerComponent
             id='iniline-pallete'
