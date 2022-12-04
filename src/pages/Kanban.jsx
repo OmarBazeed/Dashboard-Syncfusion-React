@@ -16,11 +16,11 @@ const Kanban = () => {
       cardSettings={{ contentField: 'Summary' , headerField:'Id' }}
       >
       
-      <ColumnDirective>
+      <ColumnsDirective>
         {kanbanGrid.map((item, index)=>(
-          <ColumnsDirective key={index} {...item} />
+          <ColumnDirective key={index} {...item} />
         ))}
-      </ColumnDirective>
+      </ColumnsDirective>
       
       </KanbanComponent>
     
