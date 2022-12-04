@@ -23,11 +23,13 @@ a {
 }
 
 .ordersPage img,
-.employessPage img {
+.employessPage img,
+.customersPage img {
     width: 100% !important;
 }
 
-.ordersPage img {
+.ordersPage img,
+.customersPage img {
     border-radius: 20px;
 }
 
