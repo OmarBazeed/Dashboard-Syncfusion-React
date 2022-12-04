@@ -5,7 +5,7 @@ import { Header } from '../components';
 const ColorPicker = () => {
 
 const change = (e)=>{
-  document.getElementById('preview').style.background = e.currentValue.hex ;
+  document.getElementById('preview').style.backgroundColor = e.currentValue.hex ;
 }
 
   return (
