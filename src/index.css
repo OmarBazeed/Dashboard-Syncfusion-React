@@ -21,3 +21,8 @@ a {
         border-right: none;
     }
 }
+
+.ordersPage img,
+.employessPage img {
+    width: 100% !important;
+}
