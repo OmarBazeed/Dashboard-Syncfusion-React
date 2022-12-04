@@ -26,3 +26,7 @@ a {
 .employessPage img {
     width: 100% !important;
 }
+
+.employessPage img {
+    border-radius: 50% !important;
+}
