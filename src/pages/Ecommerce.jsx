@@ -1,17 +1,20 @@
-import React from 'react';
+import React ,{useContext} from 'react';
 import {GoPrimitiveDot} from 'react-icons/go';
 import {Stacked , Pie , Button , SparkLine} from '../components';
 import {earningData , SparklineAreaData ,ecomPieChartData} from '../data/dummy';
-
+import {Context} from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
+
+  const {currentColor} = useContext(Context);
+
   return (
       <div className='d-flex flex-column justify-content-center mt-3 me-3' >
 
         <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'right 38%',backgroundSize:'cover',borderRadius:'20px'}}>
           <p className='text-muted fw-bold mb-0'>Earnings</p>
           <p className='fs-4'> $63,448.73</p>
-          <Button color="white" title="download" background="blue" borderRadius='10px' />
+          <Button color="white" title="download" background={currentColor} borderRadius='10px' />
         </div>
 
         <div className='d-flex align-items-center justify-content-around flex-wrap'>
@@ -62,7 +65,7 @@ const Ecommerce = () => {
                   />
                 </div>
                 <div className='mt-5'>
-                  <Button color="white" title="Dowload Report" background="blue" borderRadius='20px' />
+                  <Button color="white" title="Dowload Report" background={currentColor} borderRadius='20px' />
                 </div>
 
               </div>

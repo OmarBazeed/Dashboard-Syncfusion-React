@@ -10,7 +10,7 @@ import {links} from '../data/dummy';
 
 const Sidebar = () => {
 
-  const { setActiveMenue , screenSize} = useContext(Context);
+  const { setActiveMenue , screenSize , currentColor} = useContext(Context);
 
   const handleCloseSideBar = ()=>{
     if(screenSize <= 900){
@@ -20,13 +20,13 @@ const Sidebar = () => {
     }
   }
 
-  const activeLink = 'bg-secondary bg-gradient bg-opacity-25 rounded-3 d-block ';
+  const activeLink = 'bg-opacity-25 rounded-3 d-block ';
   const normalLink = 'rounded-3 d-block';
 
   return (
     <div className='mainDiv'>
 
- 
+
         <div className='d-flex align-items-center logo fw-bold fs-5 ms-2 justify-content-between my-2'>
           <Link to='/'>
             <div>
@@ -50,11 +50,16 @@ const Sidebar = () => {
               <p className='mb-3 text-muted fw-bold'> {(item.title).toUpperCase()}</p>
 
                 { item.links.map(ele=>(
-                  <NavLink to={ele.name} key={ele.name} className={ ({isActive})=> isActive ?  activeLink : normalLink } onClick={handleCloseSideBar} >
+
+                  <NavLink to={ele.name} key={ele.name} className={ ({isActive})=> isActive ?  activeLink : normalLink } onClick={handleCloseSideBar} style={ ({isActive})=> ( 
+                    { background: isActive && `linear-gradient(to right , white , ${currentColor})` , boxShadow: isActive && '2px 3px 5px gray' } 
+                    ) }>
+
                   <div className='d-flex align-items-center ps-2 my-2' style={{paddingTop:'10px'}} >
-                  <p className='me-3 text-primary'>{ele.icon}</p>
+                  <p className='me-3' style={{color:currentColor}}>{ele.icon}</p>
                   <p className='text-capitalize'>{ele.name}</p>
                   </div>
+
                   </NavLink>
                   ))}
 

@@ -27,7 +27,7 @@ const NavButton = ({title , customFunc , color , icon, dotColor})=>(
 
 const Navbar = () => {
 
-const {setActiveMenue , isClicked  , handleClick , screenSize , setScreenSize } = useContext(Context);
+const {setActiveMenue , isClicked  , handleClick , screenSize , setScreenSize , currentColor } = useContext(Context);
 
 useEffect(()=>{
 
@@ -51,14 +51,14 @@ useEffect(()=>{
     <div className='d-flex justify-content-between'>
     
       <div>
-      <NavButton title='Menu' customFunc={ ()=> setActiveMenue(true)} color='blue' icon={<AiOutlineMenu />} />
+      <NavButton title='Menu' customFunc={ ()=> setActiveMenue(true)} color={currentColor} icon={<AiOutlineMenu />} />
       </div>
       
       <div className='d-flex' >
 
-        <NavButton title='Cart' customFunc={ ()=>{handleClick('cart')}} color='blue' icon={<FiShoppingCart />} />
-        <NavButton title='Chat' customFunc={ ()=>{handleClick('chat')}} color='blue' icon={<BsChatLeft />} dotColor='#52e7fa87' />
-        <NavButton title='Notification' customFunc={ ()=>{handleClick('notification')}} color='blue' icon={<RiNotification3Line />} dotColor='#52e7fa87' />
+        <NavButton title='Cart' customFunc={ ()=>{handleClick('cart')}} color={currentColor} icon={<FiShoppingCart />} />
+        <NavButton title='Chat' customFunc={ ()=>{handleClick('chat')}} color={currentColor} icon={<BsChatLeft />} dotColor='#52e7fa87' />
+        <NavButton title='Notification' customFunc={ ()=>{handleClick('notification')}} color={currentColor} icon={<RiNotification3Line />} dotColor='#52e7fa87' />
 
         <div className='d-flex align-items-center ms-2' style={{cursor:'pointer'}} onClick={()=>handleClick('userProfile')}>
           <img src={avatar} alt='avatar' className='rounded-circle me-2' style={{height:'50px',width:'50px'}} />

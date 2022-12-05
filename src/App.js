@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
-import { AiOutlineBars } from "react-icons/ai";
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
 
@@ -13,16 +12,16 @@ import { Ecommerce, Orders, Calender, Employees, Stacked, Pyramid, Customers, Ka
 
 const  App = ()=> {
 
-  const {activeMenue , setActiveMenue} = useContext(Context);
+  const { activeMenue , showSettings , setShowSettings , currentColor , currentMode} = useContext(Context);
 
   return (
 
-  <div>
+  <div className={ currentMode === 'Light' ? 'bg-light' :'bg-dark' }>
     <BrowserRouter>
 
-      <div className="tooltipSettings" style={{position:'fixed',right:'20px',bottom:'20px',zIndex:'10000'}}>
+      <div className="tooltipSettings" style={{position:'fixed',right:'20px',bottom:'20px',zIndex:'10000'}} onClick={()=> setShowSettings(true)}>
         <TooltipComponent content='Settings' position="Top">
-          <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',color:'black',lineHeight:'24px',background:'blue',color:'white'}}>
+          <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',color:'black',lineHeight:'24px',background:currentColor, color:'white'}} >
             <FiSettings />
           </button>
         </TooltipComponent> 
@@ -46,6 +45,9 @@ const  App = ()=> {
         </div>
 
         <div className="mx-3">
+
+          { showSettings && <ThemeSettings  /> }
+
           <Routes>
 
           {/* dashboard  */}
