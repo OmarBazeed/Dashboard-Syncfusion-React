@@ -6,7 +6,7 @@ import { Header } from '../components';
 
 const Orders = () => {
   return (
-    <div className='ordersPage ps-3 pt-3' style={{background:'white',}}>
+    <div className='ordersPage p-3' style={{background:'white',}}>
 
     <Header category='Page' title='Orders' />
 

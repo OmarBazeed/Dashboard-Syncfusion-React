@@ -10,7 +10,7 @@ import {links} from '../data/dummy';
 
 const Sidebar = () => {
 
-  const { setActiveMenue , screenSize , currentColor} = useContext(Context);
+  const { setActiveMenue , screenSize , currentColor , currentMode} = useContext(Context);
 
   const handleCloseSideBar = ()=>{
     if(screenSize <= 900){
@@ -29,14 +29,14 @@ const Sidebar = () => {
 
         <div className='d-flex align-items-center logo fw-bold fs-5 ms-2 justify-content-between my-2'>
           <Link to='/'>
-            <div>
+            <div style={{color: currentMode === 'Dark' ? 'white' :'black'}}>
               <SiShopware />
               <span className=''> Shoppy </span> 
             </div>
           </Link>
 
           <TooltipComponent content='close menue' position='TopCenter' >
-            <button className='btn' style={{fontSize:'25px'}} onClick={()=>{setActiveMenue(false)}}>
+            <button className='btn' style={{fontSize:'25px',color: currentMode === 'Dark' ? 'white' :'black'}} onClick={()=>{setActiveMenue(false)}} >
             <MdOutlineCancel />
             </button>
           </TooltipComponent>
@@ -47,7 +47,7 @@ const Sidebar = () => {
         { links.map((item)=>{
           return(
             <div key={item.title} className='my-3'>
-              <p className='mb-3 text-muted fw-bold'> {(item.title).toUpperCase()}</p>
+              <p className='mb-3 fw-bold' style={{color: currentMode === 'Light' ? 'black' : 'white' }}> {(item.title).toUpperCase()}</p>
 
                 { item.links.map(ele=>(
 

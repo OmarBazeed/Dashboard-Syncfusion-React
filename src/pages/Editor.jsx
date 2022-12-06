@@ -4,7 +4,7 @@ import { Header } from '../components';
 import {EditorData} from '../data/dummy'
 const Editor = () => {
   return (
-    <div className='editorPage mx-3 pt-3 ps-3' style={{background:'white'}}> 
+    <div className='editorPage p-3' style={{background:'white'}}> 
 
       <Header category='App' title='Editor' />
 

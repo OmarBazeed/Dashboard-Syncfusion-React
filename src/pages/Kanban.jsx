@@ -5,7 +5,7 @@ import { Header } from '../components';
 
 const Kanban = () => {
   return (
-    <div className='kanbanPage mx-3 pt-3 ps-3'>
+    <div className='kanbanPage p-3' style={{background:'white'}}>
     
       <Header category='App' title='Kanban' />
 

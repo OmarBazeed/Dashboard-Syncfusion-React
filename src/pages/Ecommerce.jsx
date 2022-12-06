@@ -6,10 +6,10 @@ import {Context} from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
 
-  const {currentColor} = useContext(Context);
+  const {currentColor , currentMode } = useContext(Context);
 
   return (
-      <div className='d-flex flex-column justify-content-center mt-3 me-3' >
+      <div className='d-flex flex-column justify-content-center' >
 
         <div  className='d-flex flex-column align-items-start justify-content-center ps-3 mb-3' style={{height:'270px',background: `url( ${ require('../components/1.jpg') } )`,backgroundPosition:'right 38%',backgroundSize:'cover',borderRadius:'20px'}}>
           <p className='text-muted fw-bold mb-0'>Earnings</p>
@@ -19,7 +19,7 @@ const Ecommerce = () => {
 
         <div className='d-flex align-items-center justify-content-around flex-wrap'>
           {earningData.map((ele)=>(
-            <div className='p-3 mt-3' style={{boxShadow:'0px 0px 3px gray', width:'300px',background:'white'}} key={ele.title}>
+            <div className='p-3 mt-3' style={{boxShadow: currentMode === 'Dark'  ? `${currentColor} 2px 3px 10px 0px` :'0px 0px 3px gray', width:'300px',background:'white', borderRadius:'10px'}} key={ele.title}>
 
               <p style={{background:ele.iconBg , fontSize:'25px',width:'fit-content',padding:'4px 15px 10px 15px',borderRadius:'50%',color:ele.iconColor}} > {ele.icon} </p>
               <span className='fw-bold me-2 fs-5'> {ele.amount}</span>
@@ -30,7 +30,7 @@ const Ecommerce = () => {
           ))}
         </div>
 
-        <div className='mt-5 pt-3' style={{background:'white'}}>
+        <div className='mt-5 pt-3' style={{background:'white', boxShadow: currentMode === 'Dark'  ? `${currentColor} 2px 3px 10px 0px` :'0px 0px 3px gray', borderRadius:'10px'}}>
 
             <div className='d-flex justify-content-around align-items-center mt-2 flex-wrap'>
               <p className='text-muted fs-6 fw-bold mb-0'> Revenue Updates</p>

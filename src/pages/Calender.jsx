@@ -5,7 +5,7 @@ import {scheduleData} from '../data/dummy'
 
 const Calender = () => {
   return (
-    <div className='calenderPage pt-3 mx-3 ps-3' style={{background:'white'}}>
+    <div className='calenderPage p-3' style={{background:'white'}}>
 
     <Header category='App' title='Calender' />
 

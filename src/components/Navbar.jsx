@@ -63,7 +63,7 @@ useEffect(()=>{
         <div className='d-flex align-items-center ms-2' style={{cursor:'pointer'}} onClick={()=>handleClick('userProfile')}>
           <img src={avatar} alt='avatar' className='rounded-circle me-2' style={{height:'50px',width:'50px'}} />
           <p className='mb-0'>
-            <span className=''> Hi , </span>
+            <span className='text-muted'> Hi , </span>
             <span className='fw-bold text-muted'> Mickel </span>
             <HiChevronDown />
           </p>

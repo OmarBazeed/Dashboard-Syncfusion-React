@@ -9,7 +9,7 @@ const change = (e)=>{
 }
 
   return (
-    <div className='colorpickerPage mx-3 pt-3 ps-3' style={{background:'white',overflow:'hidden'}}>
+    <div className='colorpickerPage p-3' style={{background:'white',overflow:'hidden'}}>
 
       <Header category='App' title='ColorPicker' />
 
