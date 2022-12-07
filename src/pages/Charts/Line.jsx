@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { LineChart , Header } from '../../components';
 
 const Line = () => {
   return (
-    <div>Line</div>
+    <div className='linePage p-3' style={{background:'white'}}>
+    
+    <Header category='Chart' title='Inflaction Rate' />
+
+    <div>
+    
+    <LineChart />
+
+    </div>
+    
+    </div>
   )
 }
 

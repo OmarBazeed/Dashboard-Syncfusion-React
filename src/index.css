@@ -43,3 +43,9 @@ a {
 .employessPage img {
     border-radius: 50% !important;
 }
+
+@media screen and (max-width:325px) {
+    .navInfo {
+        margin-left: -10px !important;
+    }
+}

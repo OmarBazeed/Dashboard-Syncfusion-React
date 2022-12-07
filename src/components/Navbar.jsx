@@ -54,7 +54,7 @@ useEffect(()=>{
       <NavButton title='Menu' customFunc={ ()=> setActiveMenue(true)} color={currentColor} icon={<AiOutlineMenu />} />
       </div>
       
-      <div className='d-flex' >
+      <div className='d-flex navInfo' >
 
         <NavButton title='Cart' customFunc={ ()=>{handleClick('cart')}} color={currentColor} icon={<FiShoppingCart />} />
         <NavButton title='Chat' customFunc={ ()=>{handleClick('chat')}} color={currentColor} icon={<BsChatLeft />} dotColor='#52e7fa87' />

@@ -28,7 +28,7 @@ const  App = ()=> {
       </div>
 
       { activeMenue ? (
-        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'250px',background: currentMode === 'Light' ? '#80808066':'#ffffff00' ,transition:'.7s',overflow:'scroll'}}>
+        <div className="opendSideBar" style={{position:'fixed',top:'0',left:'0',height:'100vh',width:'250px',background: currentMode === 'Light' ? '#ede7f6':'#ffffff00' ,transition:'.7s',overflow:'scroll',boxShadow:'grey 2px 3px 10px 2px'}}>
         <Sidebar />
         </div>
       ) : (
@@ -39,7 +39,7 @@ const  App = ()=> {
       }
 
 
-      <section className="d-flex flex-column" style={{background: currentMode === 'Light' ? '#e8ffff5e' : 'black', marginLeft: activeMenue ? '250px':'0',transition:'.7s',height:'100vh',overflow:'scroll'}}>
+      <section className="d-flex flex-column" style={{background: currentMode === 'Light' ? '#ede7f6' : 'black', marginLeft: activeMenue ? '250px':'0',transition:'.7s',height:'100vh',overflow:'scroll'}}>
         <div className={activeMenue ? 'w-75':'w-100'} style={{transition:'.7s'}}>
           <Navbar />
         </div>
@@ -76,8 +76,12 @@ const  App = ()=> {
           <Route path="/stacked" element={<Stacked />} />
 
           </Routes>
+
+          {/*<Footer />*/}
+          
         </div>
       </section>
+
     </BrowserRouter>
   </div>
   );
