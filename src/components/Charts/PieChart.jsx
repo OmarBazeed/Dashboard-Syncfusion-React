@@ -1,6 +1,6 @@
 import React , {useContext} from 'react';
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, Inject , Legend , Tooltip } from '@syncfusion/ej2-react-charts';
-import {pieChartData , } from '../../data/dummy';
+import {pieChartData} from '../../data/dummy';
 import {Context} from '../../contexts/ContextProvider'
 
 const PieChart = () => {
@@ -16,15 +16,12 @@ const {currentMode} = useContext(Context);
     height='420px'
     background={ currentMode === 'Light' ? 'white' : '#bdbdbd'}
     >
-
-    <AccumulationSeriesCollectionDirective>
-    
-    {pieChartData.map((index , item)=>
-      <AccumulationSeriesDirective key={index} {...item} />
-      )}
-      <Inject services={[Legend , Tooltip , PieSeries ]} />
-    </AccumulationSeriesCollectionDirective>
-
+      <AccumulationSeriesCollectionDirective>
+        {pieChartData.map((item , index )=>
+        <AccumulationSeriesDirective key={index} {...item} />
+        )}
+        <Inject services={[Legend , Tooltip , PieSeries ]} />
+      </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
     
   )
