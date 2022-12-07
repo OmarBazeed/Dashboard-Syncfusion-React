@@ -12,16 +12,16 @@ const {currentMode} = useContext(Context);
     <AccumulationChartComponent
     id='pie-chart'
     tooltip={{enable:true}}
-    chartArea={{border:{ width:0 }}}
-    height='420px'
     background={ currentMode === 'Light' ? 'white' : '#bdbdbd'}
     >
       <AccumulationSeriesCollectionDirective>
         {pieChartData.map((item , index )=>
         <AccumulationSeriesDirective key={index} {...item} />
         )}
-        <Inject services={[Legend , Tooltip , PieSeries ]} />
       </AccumulationSeriesCollectionDirective>
+      
+      <Inject services={[Legend , Tooltip , PieSeries ]} />
+
     </AccumulationChartComponent>
     
   )
