@@ -1,5 +1,5 @@
 import React , {useContext} from 'react';
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, DateTime, SplineAreaSeries,} from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, SplineAreaSeries, Legend, Category, Tooltip, DataLabel ,Inject ,DateTime} from '@syncfusion/ej2-react-charts';
 import {areaCustomSeries ,areaPrimaryXAxis,areaPrimaryYAxis} from '../../data/dummy'
 import { Context } from '../../contexts/ContextProvider';
 import { Header } from '../../components';
@@ -30,7 +30,7 @@ const Area = () => {
             )}
         </SeriesCollectionDirective>
 
-        <Inject services={[Legend , DateTime , SplineAreaSeries]} />
+        <Inject services={[SplineAreaSeries, Legend, Category, Tooltip, DataLabel , DateTime]} />
       </ChartComponent>
 
     </div>
