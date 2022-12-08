@@ -1,5 +1,5 @@
 import React , {useContext} from 'react';
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, Inject , Legend , Tooltip } from '@syncfusion/ej2-react-charts';
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationDataLabel, AccumulationTooltip, PieSeries , Legend , Inject} from '@syncfusion/ej2-react-charts';
 import {pieChartData} from '../../data/dummy';
 import {Context} from '../../contexts/ContextProvider'
 
@@ -13,6 +13,9 @@ const {currentMode} = useContext(Context);
     id='charts'
     tooltip={{enable:true}}
     background={ currentMode === 'Light' ? 'white' : '#bdbdbd'}
+    height='420px'
+    chartArea={{border:{ width:0 }}}
+
     >
       <AccumulationSeriesCollectionDirective>
         {pieChartData.map((item , index )=>
@@ -20,7 +23,7 @@ const {currentMode} = useContext(Context);
         )}
       </AccumulationSeriesCollectionDirective>
 
-      <Inject services={[Legend , Tooltip , PieSeries ]} />
+      <Inject services={[Legend , AccumulationTooltip , PieSeries ,AccumulationDataLabel ]} />
 
     </AccumulationChartComponent>
     
