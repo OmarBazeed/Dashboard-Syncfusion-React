@@ -1,6 +1,6 @@
 import React ,{ useContext } from 'react';
 import { Header } from '../../components';
-import {ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Tooltip, BarSeries} from '@syncfusion/ej2-react-charts';
+import {ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Tooltip, ColumnSeries} from '@syncfusion/ej2-react-charts';
 import {barCustomSeries , barPrimaryXAxis ,barPrimaryYAxis} from '../../data/dummy';
 import { Context } from '../../contexts/ContextProvider';
 
@@ -26,7 +26,7 @@ const Bar = () => {
         {barCustomSeries.map((item , index)=>
           <SeriesDirective key={index} {...item} />
         )}
-        <Inject services={[Legend, Tooltip , BarSeries]} />
+        <Inject services={[Legend, Tooltip ,  ColumnSeries]} />
       </SeriesCollectionDirective>
     
     </ChartComponent>
