@@ -1,22 +1,28 @@
-import React ,{ useContext } from 'react';
-import {AccumulationChartComponent , AccumulationSeriesCollectionDirective, AccumulationSeriesDirective} from '@syncfusion/ej2-react-charts';
+import React  from 'react';
+import {AccumulationChartComponent , AccumulationSeriesCollectionDirective, AccumulationSeriesDirective ,PieSeries, Inject , AccumulationLegend , AccumulationDataLabel , AccumulationTooltip} from '@syncfusion/ej2-react-charts';
 import {pieChartData} from '../../data/dummy';
-import { Context } from '../../contexts/ContextProvider';
+
 
 
 const PieChart = () => {
 
-const {currentMode} = useContext(Context);
+
 
   return (
       <AccumulationChartComponent
       id='charts'
-      background={currentMode === 'Light' ? '#fff' : '#33373E'}
+      title='Project Cost Breakdown'
+      legendSettings={{position:'Top'}}
+      tooltip={{enable:true}}
       >
+
         <AccumulationSeriesCollectionDirective>
-          <AccumulationSeriesDirective dataSource={pieChartData} xName='x' yName='y' innerRadius='40%'>
+          <AccumulationSeriesDirective dataSource={pieChartData} type='Pie' xName='x' yName='y' dataLabel={{visible:true , name:'text' , position:'Inside'}} innerRadius='50%'>
           </AccumulationSeriesDirective>
         </AccumulationSeriesCollectionDirective>
+
+        <Inject services={[PieSeries , AccumulationLegend, AccumulationDataLabel ,AccumulationTooltip]} />
+
       </AccumulationChartComponent>
   )
 }
