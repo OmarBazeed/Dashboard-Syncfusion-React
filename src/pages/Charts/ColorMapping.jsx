@@ -1,5 +1,5 @@
 import  React , {useContext} from "react";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries , DataLabel } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, RangeColumnSeries , DataLabel } from '@syncfusion/ej2-react-charts';
 import {colorMappingData , ColorMappingPrimaryXAxis ,ColorMappingPrimaryYAxis ,rangeColorMapping } from '../../data/dummy';
 import {Header} from '../../components';
 import { Context } from '../../contexts/ContextProvider';
@@ -24,15 +24,15 @@ const ColorMapping = ()=>{
       background={currentMode === 'Light' ? '#fff' : '#33373E'}
       title="Colored Mapping For The Project Data"
       style={{textAlign: 'center'}}
-      dataSource={colorMappingData}
+      dataSource={rangeColorMapping}
       >
         <SeriesCollectionDirective>
-          {rangeColorMapping.map((item , index)=>(
+          {colorMappingData[0].map((item , index)=>(
             <SeriesDirective key={index} {...item}  />
           ))}
         </SeriesCollectionDirective>
         
-        <Inject services={[Legend, Category, Tooltip, ColumnSeries , DataLabel]} />
+        <Inject services={[Legend, Category, Tooltip, RangeColumnSeries , DataLabel]} />
       </ChartComponent>
 
     </div>
