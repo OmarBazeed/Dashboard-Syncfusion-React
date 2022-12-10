@@ -1,6 +1,6 @@
 import  React , {useContext} from "react";
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries , DataLabel } from '@syncfusion/ej2-react-charts';
-import {colorMappingData , ColorMappingPrimaryXAxis ,ColorMappingPrimaryYAxis } from '../../data/dummy';
+import {colorMappingData , ColorMappingPrimaryXAxis ,ColorMappingPrimaryYAxis ,rangeColorMapping } from '../../data/dummy';
 import {Header} from '../../components';
 import { Context } from '../../contexts/ContextProvider';
 
@@ -24,9 +24,10 @@ const ColorMapping = ()=>{
       background={currentMode === 'Light' ? '#fff' : '#33373E'}
       title="Colored Mapping For The Project Data"
       style={{textAlign: 'center'}}
+      dataSource={colorMappingData}
       >
         <SeriesCollectionDirective>
-          {colorMappingData.map((item , index)=>(
+          {rangeColorMapping.map((item , index)=>(
             <SeriesDirective key={index} {...item}  />
           ))}
         </SeriesCollectionDirective>
