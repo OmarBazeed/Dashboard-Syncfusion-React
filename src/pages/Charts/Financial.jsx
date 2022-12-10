@@ -20,9 +20,8 @@ const Financial = () => {
       >
       
         <SeriesCollectionDirective>
-        <SeriesDirective dataSource={financialChartData} type='Hilo' xName='x' high='high' low='low' name='Apple Inc' >
-        
-        </SeriesDirective>
+          <SeriesDirective dataSource={financialChartData} type='Hilo' xName='x' high='high' low='low' name='Apple Inc' >
+          </SeriesDirective>
         </SeriesCollectionDirective>
         
         <Inject services={[Tooltip , HiloSeries , DateTime , Crosshair]} />
