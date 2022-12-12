@@ -39,7 +39,7 @@ const  App = ()=> {
       }
 
 
-      <section className="d-flex flex-column" style={{background: currentMode === 'Light' ? '#ede7f6' : 'black', marginLeft: activeMenue ? '250px':'0',transition:'.7s',height:'100vh',overflow:'scroll'}}>
+      <section className="d-flex flex-column" style={{background: currentMode === 'Light' ? '#ede7f6' : 'black', marginLeft: activeMenue ? '250px':'0',transition:'.7s',height:'100vh',width:'100%',overflow:'scroll'}}>
         <div className={activeMenue ? 'w-75':'w-100'} style={{transition:'.7s'}}>
           <Navbar />
         </div>
