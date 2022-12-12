@@ -49,3 +49,9 @@ a {
         margin-left: -10px !important;
     }
 }
+
+@media screen and (max-width:450px) {
+    .ContentSection {
+        width: 100%;
+    }
+}
