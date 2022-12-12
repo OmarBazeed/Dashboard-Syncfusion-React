@@ -17,6 +17,7 @@ const Financial = () => {
       primaryYAxis={FinancialPrimaryYAxis}
       tooltip={{enable: true}}
       crosshair={{enable: true , lineType:'Vertical'}}
+      background={currentMode === 'Light' ? '#fff' : '#33373E'}
       >
       
         <SeriesCollectionDirective>

@@ -1,12 +1,11 @@
-import React  from 'react';
+import React , { useContext } from 'react';
 import {AccumulationChartComponent , AccumulationSeriesCollectionDirective, AccumulationSeriesDirective ,PieSeries, Inject , AccumulationLegend , AccumulationDataLabel , AccumulationTooltip} from '@syncfusion/ej2-react-charts';
 import {pieChartData} from '../../data/dummy';
-
-
+import {Context} from '../../contexts/ContextProvider';
 
 const PieChart = () => {
 
-
+  const {currentMode} = useContext(Context);
 
   return (
       <AccumulationChartComponent
@@ -14,6 +13,7 @@ const PieChart = () => {
       title='Project Cost Breakdown'
       legendSettings={{position:'Top'}}
       tooltip={{enable:true}}
+      background={ currentMode === 'Light' ? '#fff' : '#33373E' }
       >
 
         <AccumulationSeriesCollectionDirective>

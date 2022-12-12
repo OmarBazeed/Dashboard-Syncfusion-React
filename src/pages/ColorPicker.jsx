@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {ColorPickerComponent} from '@syncfusion/ej2-react-inputs';
 import { Header } from '../components';
+import {Context} from '../contexts/ContextProvider';
 
 const ColorPicker = () => {
 
-const change = (e)=>{
-  document.getElementById('preview').style.backgroundColor = e.currentValue.hex ;
-}
+
+  const {currentMode} = useContext(Context);
+
+  const change = (e)=>{
+    document.getElementById('preview').style.backgroundColor = e.currentValue.hex ;
+  }
 
   return (
-    <div className='colorpickerPage p-3' style={{background:'white',overflow:'hidden'}}>
+    <div className='colorpickerPage p-3' style={{background: currentMode === 'Light' ? 'white' : '#bdbdbd', overflow:'hidden'}}>
 
       <Header category='App' title='ColorPicker' />
 

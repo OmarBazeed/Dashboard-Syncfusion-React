@@ -20,6 +20,7 @@ const {currentMode} = useContext(Context)
       title='Food Comparison Chart'
       legendSettings={{position:'Top'}}
       tooltip={{enable:true}}
+      background={currentMode === 'Light' ? '#fff' : '#33373E'}
       >
 
         <AccumulationSeriesCollectionDirective>

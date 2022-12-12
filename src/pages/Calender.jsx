@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {ScheduleComponent , Day , Week , WorkWeek , Inject , Agenda , Resize , Month , DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { Header } from '../components';
-import {scheduleData} from '../data/dummy'
+import {scheduleData} from '../data/dummy';
+import {Context} from '../contexts/ContextProvider';
 
 const Calender = () => {
+
+  const {currentMode} = useContext(Context);
+
   return (
-    <div className='calenderPage p-3' style={{background:'white'}}>
+    <div className='calenderPage p-3' style={{background: currentMode === 'Light' ? 'white' : '#bdbdbd'}}>
 
     <Header category='App' title='Calender' />
 
