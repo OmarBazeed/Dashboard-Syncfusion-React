@@ -20,7 +20,7 @@ export const ContextProvider = ({children})=>{
     const [currentMode , setCurrentMode] = useState(localStorage.getItem('theme-mode') ? localStorage.getItem('theme-mode') : 'Light');
 
     const handleClick = (clicked)=>{
-        setIsClicked({ ...isClicked , [clicked]:true })
+        setIsClicked({ [clicked]:true })
     }
 
 

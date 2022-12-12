@@ -21,7 +21,7 @@ const  App = ()=> {
 
       <div className="tooltipSettings" style={{position:'fixed',right:'20px',bottom:'20px',zIndex:'10000'}} onClick={()=> setShowSettings(true)}>
         <TooltipComponent content='Settings' position="Top">
-          <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',color:'black',lineHeight:'24px',background:currentColor, color:'white'}} >
+          <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',lineHeight:'24px',background:currentColor, color:'white'}} >
             <FiSettings />
           </button>
         </TooltipComponent> 
