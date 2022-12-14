@@ -37,22 +37,26 @@ a {
     border-radius: 50% !important;
 }
 
+.ColoringPallete1,
+.ColoringPallete2 {
+    margin-right: 35px;
+}
+
 @media screen and (max-width:325px) {
     .navInfo {
         margin-left: -10px !important;
-    }
-    .ColoringPallete1 {
-        margin-right: 0 !important;
-    }
-    .ColoringPallete2 {
-        margin-right: 0 !important;
-        margin-bottom: 0 !important;
     }
 }
 
 @media screen and (max-width:450px) {
     .ContentSection {
         width: 100%;
+    }
+    .ColoringPallete1 {
+        margin-right: 0 !important;
+    }
+    .ColoringPallete2 {
+        margin-right: 0 !important;
     }
 }
 
