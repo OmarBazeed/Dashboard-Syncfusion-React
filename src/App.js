@@ -3,9 +3,7 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
-
 import { Context } from "./contexts/ContextProvider";
-
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Ecommerce, Orders, Calender, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 
@@ -16,10 +14,10 @@ const  App = ()=> {
 
   return (
 
-  <div className={ currentMode === 'Light' ? 'bg-light' :'bg-dark' }>
+  <div className={ currentMode === 'Light' ? 'bg-light' :'bg-dark' } style={{position:'relative'}}>
     <BrowserRouter>
 
-      <div className="tooltipSettings" style={{position:'fixed',right:'20px',bottom:'20px',zIndex:'10000'}} onClick={()=> setShowSettings(true)}>
+      <div className="tooltipSettings" style={{position:'absolute',right:'20px',bottom:'20px',zIndex:'10000'}} onClick={()=> setShowSettings(true)}>
         <TooltipComponent content='Settings' position="Top">
           <button className="btn rounded-circle" style={{height:'45px',width:'45px',fontSize:'20px',lineHeight:'24px',background:currentColor, color:'white'}} >
             <FiSettings />

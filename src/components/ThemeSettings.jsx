@@ -13,7 +13,7 @@ const ThemeSettings = () => {
   const {currentColor ,setCurrentColor , setShowSettings , currentMode , setCurrentMode } = useContext(Context);
 
   return (
-  <div className='px-3' style={{position:'fixed' , top:'0', right:'0' , height:'100vh',background: currentMode === 'Light' ? '#fff' : '#33373E',width:'300px',boxShadow:'grey -4px 0px 9px 0px',borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px',transition:'.5s',zIndex:'100'}} >
+  <div className='px-3' style={{position:'absolute' , top:'0', right:'0' , height:'100vh',background: currentMode === 'Light' ? '#fff' : '#33373E',width:'300px',boxShadow:'grey -4px 0px 9px 0px',borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px',transition:'.5s',zIndex:'100'}} >
 
       <div className='d-flex align-items-center justify-content-between flex-wrap mt-4'>
         <p className='fs-5 text-muted fw-semibold mb-0'> Settings</p>

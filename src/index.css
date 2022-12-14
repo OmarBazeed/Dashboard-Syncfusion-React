@@ -15,13 +15,6 @@ a {
     border-right: 1px solid #80808040;
 }
 
-@media screen and (max-width:700px) {
-    .rightSyncCom {
-        padding-right: 0 !important;
-        border-right: none;
-    }
-}
-
 .ordersPage img,
 .employessPage img,
 .customersPage img {
@@ -48,10 +41,24 @@ a {
     .navInfo {
         margin-left: -10px !important;
     }
+    .ColoringPallete1 {
+        margin-right: 0 !important;
+    }
+    .ColoringPallete2 {
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+    }
 }
 
 @media screen and (max-width:450px) {
     .ContentSection {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .rightSyncCom {
+        padding-right: 0 !important;
+        border-right: none;
     }
 }
