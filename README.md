@@ -1,10 +1,10 @@
-#  Admin Dashboard Using React And Syncfusion Components :
+##  Admin Dashboard Using React And Syncfusion Components :
  + Creating A Dashboard With `React` And `Syncfusion` ---> **Which is a modern UI components library** 
  + Using React Context Provider For Sharing Data
  + Light-Dark Mode For The App
  + Fully Responsive App Smoothly Using `Bootstrap`
  
- ## Installation Requierments :
+ ### Installation Requierments :
  ```
  npm i --save 
    @syncfusion/ej2
@@ -18,10 +18,10 @@
    @syncfusion/ej2-react-richtexteditor
    @syncfusion/ej2-react-schedule
    ``` 
- ## Live Demo : 
+ ### Live Demo : 
  [Dashboard Using React](https://ob-dashboard-syncfusion-rect.onrender.com)
  
- ## live Pictures :
+ ### live Pictures :
  <div>
  <img src='https://user-images.githubusercontent.com/114960595/214124409-13e6b068-8a3c-4f4c-87d3-c1fae8af6a87.PNG' />
  </div>
