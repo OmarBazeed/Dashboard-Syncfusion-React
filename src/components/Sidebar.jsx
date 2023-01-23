@@ -55,7 +55,7 @@ const Sidebar = () => {
                     { background: isActive && `linear-gradient(to right , white , ${currentColor})` , boxShadow: isActive && '2px 3px 5px gray' } 
                     ) }>
 
-                  <div className='d-flex align-items-center ps-2 my-2' style={{paddingTop:'10px'}} >
+                  <div className='d-flex align-items-center ps-2 my-2' style={{paddingTop:'12px'}} >
                     <p className='me-3' style={{color:currentColor}}> {ele.icon} </p>
                     <p className='text-capitalize' style={{color: currentMode === 'Light'? 'black':'white'}} > {ele.name} </p>
                   </div>
