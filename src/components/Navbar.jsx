@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { HiChevronDown } from "react-icons/hi2";
+import { AiOutlineDown } from "react-icons/ai";
 
 import avatar from '../data/avatar.jpg';
 import {Cart , Notification , Chat , UserProfile} from '.';
@@ -65,7 +65,7 @@ useEffect(()=>{
           <p className='mb-0'>
             <span className='text-muted'> Hi , </span>
             <span className='fw-bold text-muted'> Mickel </span>
-            <HiChevronDown />
+            <AiOutlineDown />
           </p>
         </div>
 

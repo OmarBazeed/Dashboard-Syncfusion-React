@@ -56,8 +56,8 @@ const Sidebar = () => {
                     ) }>
 
                   <div className='d-flex align-items-center ps-2 my-2' style={{paddingTop:'10px'}} >
-                  <p className='me-3' style={{color:currentColor}}>{ele.icon}</p>
-                  <p className='text-capitalize'>{ele.name}</p>
+                    <p className='me-3' style={{color:currentColor}}> {ele.icon} </p>
+                    <p className='text-capitalize' style={{color: currentMode === 'Light'? 'black':'white'}} > {ele.name} </p>
                   </div>
 
                   </NavLink>
